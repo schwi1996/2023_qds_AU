@@ -6,7 +6,22 @@
 
 .card {
 
-    padding: 5%;
+    padding: 3%;
     margin: 2%;
+
+}
+
+.card-logo {
+
+    aspect-ratio: 1 / 1;
+    width: 4%;
+    display: inline;
+
+}
+
+.card-title {
+
+    height: 100%;
+    display: inline;
 
 }
