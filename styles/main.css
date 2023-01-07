@@ -1,20 +1,36 @@
+body{
+    background-image: url("/img/backgr1.webp");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #title{
+    color: rgb(14, 175, 14);
     font-size: 100px;
-    background-color: blue;
     text-align: center;
-    border: 3px solid green;
+}
+
+#select{
+    color: rgb(14, 175, 14);
+    text-align: center;
+    position: relative;
+    font-size: 60px;
+    top: 100px;
 }
 
 #gallery{
-    text-align: center;
-    display: flex;
+  text-align: center;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 200px;
+  /* align-items: center; */
+  position: relative;
+  top: 250px;
+  /* height: 200px; */
 }
 
 #Chinese {
-	background:#c00;
+	background:red;
     width:200px;
 	height:200px;
 	margin:10px;
@@ -22,7 +38,7 @@
 }
 
 #Japanese{
-    background-color: green;
+    background-color: red;
     width:200px;
 	height:200px;
 	margin:10px;
@@ -30,7 +46,7 @@
 }
 
 #Korean{
-    background-color: aqua;
+    background-color: red;
     width:200px;
 	height:200px;
 	margin:10px;
