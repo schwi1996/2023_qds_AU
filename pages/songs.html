@@ -43,76 +43,78 @@
 
 <body>
 
-          <div class="col-md-10 col-lg-9 col-xl-8">
-              <div class="card border-0">
-                  <div class="card-body px-3 px-md-5">
-                      <h5>FILTERS</h5>
-                      <div class="card mb-3">
-                          <div class="card-body">
-                              <div class="row px-4">
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
-                                        <label>Most played</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
-                                        <label>Least played</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
-                                        <label>Top Charts</label>
-                                    </div>
-
-                                    <div class="card mb-3">
-                                          <h6><span class="fa fa-star icon-star mr-3"></span>Language</h6>
-                                      <div class="card-body">
-                                          <div class="row px-4 mb-2">
-                                            <button type="button" class="btn btn-outline-primary">Chinese</button>
-                                            <button type="button" class="btn btn-outline-primary">Japanese</button>
-                                            <button type="button" class="btn btn-outline-primary">Korean</button>
-                                          </div>
-                                  </div>
-                              </div>
-                              <div class="card-footer bg-white row mx-0 mb-2">
-                                <button class="btn btn-secondary px-4" id="button2">Cancel</button>
-                                <button class="btn btn-primary ml-auto" id="button2">Apply Filter</button>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
+  <div class="col-md-10 col-lg-9 col-xl-8">
+    <div class="card border-0">
+      <div class="card-body px-3 px-md-5">
+        <h5>FILTERS</h5>
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row px-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                <label>Most played</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                <label>Least played</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                <label>Top Charts</label>
               </div>
 
-  <!-- Template for all the cards -->
+              <div class="card mb-3">
+                <h6><span class="fa fa-star icon-star mr-3"></span>Language</h6>
+                <div class="card-body">
+                  <div class="row px-4 mb-2">
+                    <button type="button" class="btn btn-outline-primary">Chinese</button>
+                    <button type="button" class="btn btn-outline-primary">Japanese</button>
+                    <button type="button" class="btn btn-outline-primary">Korean</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white row mx-0 mb-2">
+                <button class="btn btn-secondary px-4" id="button2">Cancel</button>
+                <button class="btn btn-primary ml-auto" id="button2">Apply Filter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template for all the cards -->
   <template id="cardTemplate">
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Card title</h4>
-        <iframe class="spotify-embed" style="border-radius:12px" src="" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe id="embed" style="border-radius:12px" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
   </template>
 
-  <div class="container">
+      <div class="container">
 
-    <div class="cell nav-bar">
-      <nav id="nav"></nav>
-    </div>
+        <div class="cell nav-bar">
+          <nav id="nav"></nav>
+        </div>
 
-    <div id="gallery" class="gallery"></div>
+        <div id="gallery" class="gallery"></div>
 
 
-    <!-- <div class="cell footer">
+        <!-- <div class="cell footer">
       <nav id="foot"></nav>
     </div> -->
-    <button onclick="topFunction()" id="scrollTopButton" title="Scroll to top">&#11165;</button>
-  </div>
+    <button onclick="returnToCurrent()" id="scrollCurrentButton">&#11165;</button>
+        <button onclick="topFunction()" id="scrollTopButton" title="Scroll to top">&#11165;</button>
+      </div>
 
 
-  <!-- Our JavaScript files -->
-  <script src="../scripts/firebaseAPI.js"></script>
-  <script src="../scripts/injectTemplates.js"></script>
-  <script src="../scripts/songs.js"></script>
-  <script src="../scripts/scrolltopbutton.js"></script>
+      <!-- Our JavaScript files -->
+      <script src="../scripts/firebaseAPI.js"></script>
+      <script src="../scripts/injectTemplates.js"></script>
+      <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+      <script src="../scripts/songs.js"></script>
+      <script src="../scripts/scrolltopbutton.js"></script>
 
 </body>
 
