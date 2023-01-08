@@ -42,6 +42,21 @@ function writeToDB(songs) {
 
 function updatePlacement() {
 
-    
+    db.collection("songs")
+  .get()
+      .then(songs => {
+
+        songs.forEach(song => {
+
+            var place = parseInt(song.data().plays);
+            
+
+            db.collection("songs").doc(song.id).update({
+            plays: place
+          });
+
+        });
+
+      });
 
 }
