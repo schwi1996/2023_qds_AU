@@ -2,28 +2,27 @@
 <html lang="en">
 
 <head>
-  
+
   <title>artificial unintelligents</title>
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Our Stylesheets -->  
-  <link rel="stylesheet" href="../styles/main.css">
+  <!-- Our Stylesheets -->
+  <link rel="stylesheet" href="../styles/songs.css">
 
   <!-- Our Javascript Files -->
-  <!-- put scripts here--> 
+  <!-- put scripts here-->
 
   <!-- Bootstrap Library CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
   <!-- Boostrap Library JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-  crossorigin="anonymous"></script>
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -35,30 +34,64 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
+
   <!-- JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
-<body>
-  
-    <div class="container">
-  
-      <div class="cell nav-bar">
-        <nav id="nav"></nav>
-      </div>
-  
-      
-      <div class="cell footer">
-        <nav id="foot"></nav>
-      </div>
-  
-    </div>
 
-    
-  <!-- Our JavaScript files -->
-  <script src="../scripts/firebaseAPI.js"></script>
-  <script src="../scripts/injectTemplates.js"></script>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">FILTERS</a>
+    <div class="m-4">
+      <div class="btn-group">
+        <select id="sort-by">
+          <option value="English">Top Charts</option>
+          <option value="Spanish">Most Played</option>
+          <option value="French">Least Played</option>
+        </select>
+          <select id="language">
+            <option value="English">Korean</option>
+            <option value="Spanish">Japanese</option>
+            <option value="French">Chinese</option> </select>
+        </div>    
+      </div>
+        <button class="btn" id="button2">Apply Filter</button>
+</nav>
+  <!-- Template for all the cards -->
+  <template id="cardTemplate">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <iframe id="embed" style="border-radius:12px" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </template>
+
+      <div class="container">
+
+        <div class="cell nav-bar">
+          <nav id="nav"></nav>
+        </div>
+
+        <div id="gallery" class="gallery"></div>
+
+
+        <!-- <div class="cell footer">
+      <nav id="foot"></nav>
+    </div> -->
+    <button onclick="returnToCurrent()" id="scrollCurrentButton">&#11165;</button>
+        <button onclick="topFunction()" id="scrollTopButton" title="Scroll to top">&#11165;</button>
+      </div>
+
+
+      <!-- Our JavaScript files -->
+      <script src="../scripts/firebaseAPI.js"></script>
+      <script src="../scripts/injectTemplates.js"></script>
+      <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+      <script src="../scripts/songs.js"></script>
+      <script src="../scripts/scrolltopbutton.js"></script>
 
 </body>
 

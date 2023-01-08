@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background-color: #ffcbd2;
 }
 
 #gallery {
@@ -9,7 +10,14 @@ html {
 }
 
 .navbar-brand {
-    padding: 5%;
+    /* padding: 5%; */
+    padding-left: 10% !important;
+}
+
+#home {
+    max-width: 4.5em;
+    height: auto;
+    padding-left: 15%;
 }
 
 .card {
@@ -82,7 +90,7 @@ html {
 }
 
 #button2 {
-    margin: 5%;
+    margin: 0.5em !important;
 }
 
 /* End of current button */
