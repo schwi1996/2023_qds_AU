@@ -8,6 +8,10 @@ html {
 
 }
 
+.navbar-brand {
+    padding: 5%;
+}
+
 .card {
 
     padding: 3%;
@@ -52,3 +56,7 @@ html {
     background-color: rgba(99,97,107,255);
 }
 /* End of top button */
+
+#button2 {
+    margin: 5%;
+}
