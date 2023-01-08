@@ -9,7 +9,9 @@ body {
 
 .card {
     background-color: #ffcbd2 !important;
+    border: none !important;
 }
+
 
 #gallery {
 
