@@ -46,17 +46,26 @@
     <a class="navbar-brand">FILTERS</a>
     <div class="m-4">
       <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sort By</button>
+        <select id="sort-by">
+          <option value="English">Top Charts</option>
+          <option value="Spanish">Most Played</option>
+          <option value="French">Least Played</option>
+        </select>
+          <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Language</button>
           <div class="dropdown-menu">
               <div class= "dropdown-item dropdown-sort1">Most Played</div>
               <div class="dropdown-item dropdown-sort2">Least Played</div>
               <div class="dropdown-item dropdown-sort3">Top Charts</div>
-          </div>
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Languages</button>
+          </div> -->
+          <select id="language">
+            <option value="English">Korean</option>
+            <option value="Spanish">Japanese</option>
+            <option value="French">Chinese</option> </select>
+        <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Languages</button>
         <div class="dropdown-menu">
             <div class="dropdown-item dropdown-lang1">Chinese</div>
             <div class="dropdown-item dropdown-lang2">Japanese</div>
-            <div class="dropdown-item dropdown-lang3">Korean</div>
+            <div class="dropdown-item dropdown-lang3">Korean</div> -->
         </div>    
       </div>
       </div>
@@ -88,7 +97,7 @@
                                     </div>
                                   </div>
                               </div> -->
-                                <button class="btn btn-primary ml-auto" id="button2">Apply Filter</button>
+                                <button class="btn" id="button2">Apply Filter</button>
                           </div>
                       </div>
                   </div>
