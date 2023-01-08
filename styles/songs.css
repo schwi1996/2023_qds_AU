@@ -44,7 +44,7 @@ html {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgba(57, 63, 105, 0.473);
+    background-color: rgba#67121da3;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -53,9 +53,11 @@ html {
 }
   
 #scrollTopButton:hover {
-    background-color: rgba(99,97,107,255);
+    background-color: rgba#67121dd1;
 }
 /* End of top button */
+
+/* Start of current button */
 
 #scrollCurrentButton {
 
@@ -66,7 +68,7 @@ html {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgba(57, 63, 105, 0.473);
+    background-color: rgba#67121da3;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -74,3 +76,13 @@ html {
     font-size: 18px;
 
 }
+
+#scrollCurrentButton:hover {
+    background-color: rgba#67121dd1;
+}
+
+#button2 {
+    margin: 5%;
+}
+
+/* End of current button */
