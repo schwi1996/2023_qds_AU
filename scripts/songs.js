@@ -39,12 +39,17 @@ function manageEmbed(element, index, embed) {
         
         EmbedController.addListener('playback_update', e => {
 
-            console.log(e);
+            var button = document.getElementById("scrollCurrentButton");
 
             if (!e.data.isPaused) {
 
                 current = index;
                 console.log(current);
+                button.style.display = "block";
+
+            } else {
+
+                button.style.display = "none";
 
             }
 
@@ -67,7 +72,6 @@ function displaySongs() {
     // Loads in the cards when the user first initializes the page
     db.collection("songs")
         .where("language", "==", "Korean")
-        .limit(10)
         .get()
         .then(songs => {
 
