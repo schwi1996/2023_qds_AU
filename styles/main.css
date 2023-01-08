@@ -79,8 +79,7 @@ body {
     background-color: #67121e;
     border: none;
     color: #ffcbd2;
-    border-radius: 3em;
-    padding: 0.2em 0.7em;
+    padding: 0.2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -90,14 +89,14 @@ body {
 #ch:hover {
     color: #c3fbf4;
     font-weight: 600;
+    border-bottom: 3px solid #c3fbf4;
 }
 
 #jp {
     background-color: #67121e;
     border: none;
     color: #ffcbd2;
-    border-radius: 3em;
-    padding: 0.2em 0.7em;
+    padding: 0.2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -107,14 +106,14 @@ body {
 #jp:hover {
     color: #c3fbf4;
     font-weight: 600;
+    border-bottom: 3px solid #c3fbf4;
 }
 
 #kr {
     background-color: #67121e;
     border: none;
     color: #ffcbd2;
-    border-radius: 3em;
-    padding: 0.2em 0.7em;
+    padding: 0.2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -124,4 +123,13 @@ body {
 #kr:hover {
     color: #c3fbf4;
     font-weight: 600;
+    border-bottom: 3px solid #c3fbf4;
+}
+
+#Chinese {
+    padding-right: 2.5em;
+}
+
+#Korean {
+    padding-left: 2.5em;
 }
