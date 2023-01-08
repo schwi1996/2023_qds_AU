@@ -39,3 +39,9 @@ function writeToDB(songs) {
     });
 
 }
+
+function updatePlacement() {
+
+    
+
+}
