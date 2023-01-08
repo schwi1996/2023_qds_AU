@@ -48,17 +48,56 @@
       <div class="btn-group">
         <a class="navbar-brand">FILTERS</a>
         <select id="sort-by">
-          <option value="English">Top Charts</option>
-          <option value="Spanish">Most Played</option>
-          <option value="French">Least Played</option>
+          <option value="topcharts">Top Charts</option>
+          <option value="mostplayed">Most Played</option>
+          <option value="leastplayed">Least Played</option>
         </select>
           <select id="language">
-            <option value="English">Korean</option>
-            <option value="Spanish">Japanese</option>
-            <option value="French">Chinese</option> </select>
-      </div>    
-    </div>
-    <button class="btn" id="button2">Apply Filter</button>
+            <option value="Korean">Korean</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Chinese">Chinese</option> 
+          </select>
+        <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Languages</button>
+        <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-lang1">Chinese</div>
+            <div class="dropdown-item dropdown-lang2">Japanese</div>
+            <div class="dropdown-item dropdown-lang3">Korean</div> -->
+        </div>    
+      </div>
+      </div>
+                                      <!-- <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                                        <label>Most played</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                                        <label>Least played</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                                        <label>Top Charts</label>
+                                    </div>
+                                    
+                                          <h6><span class="fa fa-star icon-star mr-3"></span>Language</h6>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                                            <label>Chinese</label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                                          <label>Japanese</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Chinese" value="Chinese">
+                                        <label>Korean</label>
+                                    </div>
+                                  </div>
+                              </div> -->
+                                <button class="btn" id="button2" onclick="displaySongs();">Apply Filter</button>
+                          </div>
+                      </div>
+                  </div>
+                </form>
 </nav>
   <!-- Template for all the cards -->
   <template id="cardTemplate">
