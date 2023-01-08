@@ -45,15 +45,15 @@
   
   <div class="container">
 
-    <div class="cell nav-bar">
-      <nav id="nav"></nav>
+    <div id="heading">
+      <h1 id="title">ASIANIFY</h1>
+    </div>
+    <div id="intro">
+      <span class="typing"></span>
     </div>
 
-    <h1 id="title">ASIANIFY</h1>
-    
-
     <div id="findButton">
-      <button id="find"><a href="./shuffledplay.html">Find me a song!</a></button>
+      <a href="./shuffledplay.html"></a><button id="find">Shuffle!</button></a>
     </div>
 
     <div id="text">
@@ -62,13 +62,9 @@
     </div>
 
     <div id="gallery">
-      <div id="Chinese"><button id="ch"><a href="./play.html">Chinese</a></button></div>
-      <div id="Japanese"><button id="jp"><a href="./play.html">Japanese</a></button></div>
-      <div id="Korean"><button id="kr"><a href="./play.html">Korean</a></button></div>
-    </div>
-    
-    <div class="cell footer">
-      <nav id="foot"></nav>
+      <div id="Chinese"><a href="./play.html"></a><button id="ch">Chinese</button></a></div>
+      <div id="Japanese"><a href="./play.html"><button id="jp">Japanese</button></a></div>
+      <div id="Korean"><a href="./play.html"></a><button id="kr">Korean</button></a></div>
     </div>
 
   </div>
@@ -77,6 +73,23 @@
   <!-- Our JavaScript files -->
   <script src="../scripts/firebaseAPI.js"></script>
   <script src="../scripts/injectTemplates.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    <script>
+
+        var typed = new Typed(".typing", {
+            strings: ["Find the hottest songs of the year in J-pop, K-pop, and C-pop!",
+                      "Just login into Spotify and Asianify will bring you through the list!", 
+                      "Click on Shuffle to go through a shuffled list or pick a language to begin!"],
+            typeSpeed: 50,
+            backSpeed: 15,
+            loop: true,
+            smartBackspace: true,
+            showCursor: true,
+            cursorChar: '|'
+        })
+    </script>
 
 </body>
 
