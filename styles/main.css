@@ -15,6 +15,7 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 3em;
 }
 
 #find {
@@ -27,6 +28,10 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 3em;
+}
+
+#text {
+    padding-top: 5em;
 }
 
 #or {
@@ -42,7 +47,8 @@ body{
     text-align: center;
     position: relative;
     font-size: 60px;
-    top: 100px;
+    /* top: 100px; */
+    top: 0.1em;
 }
 
 #gallery{
@@ -51,7 +57,7 @@ body{
   justify-content: center;
   /* align-items: center; */
   position: relative;
-  top: 250px;
+  /* top: 250px; */
   /* height: 200px; */
 }
 
