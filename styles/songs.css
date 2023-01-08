@@ -3,6 +3,16 @@ html {
     background-color: #ffcbd2;
 }
 
+body {
+    background-color: #ffcbd2 !important;
+}
+
+.card {
+    background-color: #ffcbd2 !important;
+    border: none !important;
+}
+
+
 #gallery {
 
     padding: 5%;
