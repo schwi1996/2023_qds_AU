@@ -10,6 +10,19 @@ var iframe;
 
 var current;
 
+var sortBy = "topcharts";
+var language = document.getElementById("language");
+
+
+// Get the URL String
+var parameters = new URL(window.location.href);
+
+if (parameters.searchParams.get("language")) {
+    language.value = parameters.searchParams.get("language");
+} else {
+    language.value = "Korean";
+}
+
 
 
 // Injects a single card into the gallery
@@ -69,15 +82,46 @@ function manageEmbed(element, index, embed) {
 
 function displaySongs() {
 
+    sortBy = document.getElementById("sort-by").value;
+
+    gallery.innerHTML = "";
+
+    var value;
+    var order;
+
+    switch (sortBy) {
+
+        case "mostplayed":
+            value = "plays";
+            order = "desc";
+            break;
+
+        case "leastplayed":
+            value = "plays";
+            order = "asc";
+            break;
+
+        case "topcharts":
+            value = "placement";
+            order = "asc";
+            break;
+
+        default:
+            console.log("Try a for loop");
+            break;
+
+    }
+
     // Loads in the cards when the user first initializes the page
     db.collection("songs")
-        .where("language", "==", "Korean")
-        .get()
-        .then(songs => {
-
-            var i = 0;
-
-            songs.forEach(song => {
+    .where("language", "==", language.value)
+    .orderBy(value, order)
+    .get()
+    .then(songs => {
+        
+        var i = 0;
+        
+        songs.forEach(song => {
 
                 displayCard(i, song.data().title, song.data().translation, song.data().embed);
 
