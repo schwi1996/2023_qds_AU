@@ -25,6 +25,16 @@
   integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
   crossorigin="anonymous"></script>
 
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 
@@ -38,6 +48,12 @@
     <div class="cell nav-bar">
       <nav id="nav"></nav>
     </div>
+
+    <!-- <form id="myForm">
+      <input type="file" id="csvFile" />
+      <br />
+      <input id="submit" type="button" value="Submit" onclick="readFile()" />
+   </form> -->
     
     <div class="cell footer">
       <nav id="foot"></nav>
@@ -47,6 +63,8 @@
 
 
   <!-- Our JavaScript files -->
+  <script src="../scripts/firebaseAPI.js"></script>
+  <script src="../scripts/writeToDB.js"></script>
   <script src="../scripts/injectTemplates.js"></script>
 
 </body>
