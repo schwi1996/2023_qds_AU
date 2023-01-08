@@ -11,6 +11,7 @@
 
   <!-- Our Stylesheets -->  
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/songs.css">
 
   <!-- Our Javascript Files -->
   <!-- put scripts here--> 
@@ -44,21 +45,23 @@
   
     <div class="container">
   
-      <div class="cell nav-bar">
-        <nav id="nav"></nav>
+      <div class="card">
+        <div id="card-body" class="card-body">
+          <h4 id="card-title" class="card-title">Card title</h4>
+          <!-- <iframe id="embed" style="border-radius:12px" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+        </div>
       </div>
-  
+
+      <button id="find" onclick="loadNewSong()">Shuffle!</button>
       
-      <div class="cell footer">
-        <nav id="foot"></nav>
-      </div>
-  
     </div>
 
     
   <!-- Our JavaScript files -->
   <script src="../scripts/firebaseAPI.js"></script>
   <script src="../scripts/injectTemplates.js"></script>
+  <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+  <script src="../scripts/shuffledplay.js"></script>
 
 </body>
 
