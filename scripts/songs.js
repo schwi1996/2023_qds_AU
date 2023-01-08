@@ -26,14 +26,14 @@ function displayCard(index, nonTranslated, translated, embed) {
     
     gallery.appendChild(newCard);
 
-    manageEmbed(newCard, index);
+    manageEmbed(newCard, index, embed);
 
 }
 
-function manageEmbed(element, index) {
+function manageEmbed(element, index, embed) {
 
     let options = {
-        uri: 'spotify:track:5QDLhrAOJJdNAmCTJ8xMyW'
+        uri: embed
     };
     let callback = (EmbedController) => {
         
