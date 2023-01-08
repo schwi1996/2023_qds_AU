@@ -35,7 +35,6 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
-
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 
@@ -43,37 +42,20 @@
 
 <body>
   
-  <div class="container">
-
-    <div class="cell nav-bar">
-      <nav id="nav"></nav>
+    <div class="container">
+  
+      <div class="cell nav-bar">
+        <nav id="nav"></nav>
+      </div>
+  
+      
+      <div class="cell footer">
+        <nav id="foot"></nav>
+      </div>
+  
     </div>
 
-    <h1 id="title">ASIANIFY</h1>
     
-
-    <div id="findButton">
-      <button id="find"><a href="./shuffledplay.html">Find me a song!</a></button>
-    </div>
-
-    <div id="text">
-      <p id="or">- or -</p>
-      <p id="select">Select a language:</p>
-    </div>
-
-    <div id="gallery">
-      <div id="Chinese"><button id="ch"><a href="./play.html">Chinese</a></button></div>
-      <div id="Japanese"><button id="jp"><a href="./play.html">Japanese</a></button></div>
-      <div id="Korean"><button id="kr"><a href="./play.html">Korean</a></button></div>
-    </div>
-    
-    <div class="cell footer">
-      <nav id="foot"></nav>
-    </div>
-
-  </div>
-
-
   <!-- Our JavaScript files -->
   <script src="../scripts/firebaseAPI.js"></script>
   <script src="../scripts/injectTemplates.js"></script>
