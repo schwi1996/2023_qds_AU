@@ -12,6 +12,7 @@
   <!-- Our Stylesheets -->  
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/songs.css">
+  <link rel="stylesheet" href="../styles/shuffledplay.css">
 
   <!-- Our Javascript Files -->
   <!-- put scripts here-->
@@ -44,15 +45,25 @@
 <body>
   
     <div class="container">
-  
+      <!-- <nav class="navbar navbar-light bg-light">
+        <a href="main.html"><img id="home" src="/img/spotify.png"></a>
+      </nav> -->
+
+      <div>
+        <nav id="tempnav">
+          <a href="main.html"><img id="tempicon" src="/img/spotify.png"></a>
+          ASIANIFY
+        </nav>
+      </div>
       <div class="card">
         <div id="card-body" class="card-body">
           <h4 id="card-title" class="card-title">Card title</h4>
           <!-- <iframe id="embed" style="border-radius:12px" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
         </div>
       </div>
-
-      <button id="find" onclick="loadNewSong()">Shuffle!</button>
+      <div id="findButton">
+        <button id="find" onclick="loadNewSong()">Shuffle!</button>
+      </div>
       
     </div>
 

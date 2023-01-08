@@ -1,0 +1,34 @@
+#findButton {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1em;
+}
+
+#find {
+  background-color: #ffcbd2;
+  border: none;
+  color: #67121e;
+  border-radius: 3em;
+  padding: 0.2em 5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3em;
+}
+
+#find:hover {
+    background-color: #c3fbf4;
+    font-weight: 600;
+}
+
+#tempnav {
+    background-color: aliceblue;
+    padding: 1em !important;
+    font-size: 1.5em;
+}
+
+#tempicon {
+    max-width: 4em;
+    height: auto;
+}
