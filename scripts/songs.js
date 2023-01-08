@@ -7,7 +7,7 @@ var cardTemplate = document.getElementById("cardTemplate");
 
 
 // Injects a single card into the gallery
-function displayCard(idIndex, nonTranslated, translated) {
+function displayCard(idIndex, nonTranslated, translated, embed) {
 
     let newCard = cardTemplate.content.cloneNode(true);
 
@@ -18,7 +18,7 @@ function displayCard(idIndex, nonTranslated, translated) {
     else
         newCard.querySelector('.card-title').innerHTML = nonTranslated + " - " + translated;
 
-    newCard.querySelector('.spotify-embed').src = "https://open.spotify.com/embed/track/5QDLhrAOJJdNAmCTJ8xMyW?utm_source=generator&theme=0";
+    newCard.querySelector('.spotify-embed').src = embed;
 
     gallery.appendChild(newCard);
 
@@ -28,13 +28,13 @@ function displaySongs() {
 
     // Loads in the cards when the user first initializes the page
     db.collection("songs")
-    //.where("language", "==", "Korean")
+    // .where("language", "==", "Korean")
     .get()
         .then(songs => {
 
             songs.forEach(song => {
 
-                displayCard(song.data().songid, song.data().title, song.data().translation);
+                displayCard(song.data().songid, song.data().title, song.data().translation, song.data().embed);
 
             });
 
