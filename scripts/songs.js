@@ -11,7 +11,17 @@ var iframe;
 var current;
 
 var sortBy = "topcharts";
-var language = "Korean";
+var language = document.getElementById("language");
+
+
+// Get the URL String
+var parameters = new URL(window.location.href);
+
+if (parameters.searchParams.get("language")) {
+    language.value = parameters.searchParams.get("language");
+} else {
+    language.value = "Korean";
+}
 
 
 
@@ -104,7 +114,7 @@ function displaySongs() {
 
     // Loads in the cards when the user first initializes the page
     db.collection("songs")
-    .where("language", "==", document.getElementById("language").value)
+    .where("language", "==", language.value)
     .orderBy(value, order)
     .get()
     .then(songs => {
