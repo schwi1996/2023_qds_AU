@@ -26,25 +26,30 @@ function displayCard(index, nonTranslated, translated, embed) {
     
     gallery.appendChild(newCard);
 
-    manageEmbed(newCard, index);
+    manageEmbed(newCard, index, embed);
 
 }
 
-function manageEmbed(element, index) {
+function manageEmbed(element, index, embed) {
 
     let options = {
-        uri: 'spotify:track:5QDLhrAOJJdNAmCTJ8xMyW'
+        uri: embed
     };
     let callback = (EmbedController) => {
         
         EmbedController.addListener('playback_update', e => {
 
-            console.log(e);
+            var button = document.getElementById("scrollCurrentButton");
 
             if (!e.data.isPaused) {
 
                 current = index;
                 console.log(current);
+                button.style.display = "block";
+
+            } else {
+
+                button.style.display = "none";
 
             }
 
@@ -67,7 +72,6 @@ function displaySongs() {
     // Loads in the cards when the user first initializes the page
     db.collection("songs")
         .where("language", "==", "Korean")
-        .limit(10)
         .get()
         .then(songs => {
 
