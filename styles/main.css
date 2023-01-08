@@ -11,6 +11,32 @@ body{
     text-align: center;
 }
 
+#findButton {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#find {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 0.2em 5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3em;
+}
+
+#or {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
 #select{
     color: rgb(14, 175, 14);
     text-align: center;
