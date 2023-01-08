@@ -72,6 +72,8 @@ function manageEmbed(element, index, embed) {
 
 function displaySongs() {
 
+    sortBy = document.getElementById("sort-by").value;
+
     gallery.innerHTML = "";
 
     var value;
@@ -102,7 +104,7 @@ function displaySongs() {
 
     // Loads in the cards when the user first initializes the page
     db.collection("songs")
-    .where("language", "==", language)
+    .where("language", "==", document.getElementById("language").value)
     .orderBy(value, order)
     .get()
     .then(songs => {
@@ -120,24 +122,6 @@ function displaySongs() {
         });
 
 }
-
-function setFilter(type, value) {
-
-    if (type == "sortby") {
-
-        sortBy = value;
-
-    } else if (type == "language") {
-
-        language = value;
-
-    }
-
-    console.log(sortBy);
-    console.log(language);
-
-}
-
 
 function returnToCurrent() {
 
