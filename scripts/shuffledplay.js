@@ -1,7 +1,5 @@
 var cardTitle = document.getElementById("card-title");
 
-// var embed = document.getElementById("embed");
-
 var button = document.getElementById("find");
 
 var randomIndex;

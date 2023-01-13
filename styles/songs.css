@@ -7,12 +7,6 @@ body {
     background-color: #ffcbd2 !important;
 }
 
-.card {
-    background-color: #ffcbd2 !important;
-    border: none !important;
-}
-
-
 #gallery {
 
     padding: 5%;
@@ -28,12 +22,16 @@ body {
     max-width: 4.5em;
     height: auto;
     padding-left: 15%;
+    margin-left: 25%;
 }
 
 .card {
 
     padding: 3%;
-    margin: 2%;
+    margin: 2% auto;
+    background-color: #ffcbd2 !important;
+    border: none !important;
+    width: 80%;
 
 }
 
@@ -58,16 +56,16 @@ body {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 4%;
     z-index: 99;
     border: none;
     outline: none;
     background-color: rgba#67121da3;
     color: black;
     cursor: pointer;
-    padding: 15px;
+    padding: 1% 15px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 21px;
 }
   
 #scrollTopButton:hover {
@@ -82,21 +80,18 @@ body {
     display: none;
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 4%;
     z-index: 99;
     border: none;
-    outline: none;
-    background-color: rgba#67121da3;
-    color: black;
     cursor: pointer;
-    padding: 15px 0;
     border-radius: 5px;
-    font-size: 18px;
+    width: 5%;
+    height: 6%;
 
 }
 
 #target{
-    width: 5%;
+    width: 75%;
     aspect-ratio: 1 / 1;
 }
 
@@ -104,8 +99,9 @@ body {
     background-color: rgba#67121dd1;
 }
 
-#button2 {
+#applyfilter {
     margin: 0.5em !important;
+    margin-right: 2% !important;
 }
 
 /* End of current button */

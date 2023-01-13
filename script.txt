@@ -2,13 +2,13 @@ Hello! We are AU, the Artificial Unintelligents!
 
 My name is --, and this is --, --, and --.
 
-We present to you, ASIANIFY, come join the fun, where you can access the most popular songs from Korea, Japan, and China.
+We present to you, VERSIFY, come join the fun, where you can access the most popular songs from Korea, Japan, and China.
 
 This is Sierra. She's a k-pop enthusiast who wants to listen to songs in other foreign languages but she doesn't know how to write in those languages.
 
 This leads to our main problem. How can we facilitate access to popular music in languages other than English? While music is a universal language and we are surrounded by many music apps, not everyone is able to access foreign music easily because they cannot write in the foreign language.
 
-This is where ASIANIFY comes in. ASIANIFY, ft Spotify, provides users with the most popular songs in given foreign languages. This way, not only will they be able to easily access a foreign song, they can also obtain the translated title in English and the link to Spotify so that they won't have to search it up themselves.
+This is where VERSIFY comes in. VERSIFY, ft Spotify, provides users with the most popular songs in given foreign languages. This way, not only will they be able to easily access a foreign song, they can also obtain the translated title in English and the link to Spotify so that they won't have to search it up themselves.
 
 While brainstorming, we mainly focused on three questions. What type of music? What languages? And what will make us unique?
 We decided to first focus on the top 50 songs in 2022 for three Asian languages, Chinese, Japanese and Korean. What makes us unique is that in addition to helping the user summarize the most popular songs, we also provide translated titles to give users better context of the song. These titles can be copy and pasted which is a function not provided on Spotify. 
