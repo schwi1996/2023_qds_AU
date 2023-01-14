@@ -6,7 +6,7 @@
 
 
 ## General Info
-Welcome to iinsight! iinsight is an app to help educators manage their data and save time. iinsight allows educators to sync data between devices, quickly take notes, and capture pictures all in the app, and this is just the tip of the iceberg!
+Welcome to Versify! Have you ever listened to a song but it's in a language other than English? Or you just want to explore songs in a different language? Versify provides the most popular songs of the year in foreign languages for your enjoyment!
 	
 ## Technologies
 Technologies used for this project:
@@ -23,36 +23,36 @@ Content of the project folder:
 ├── .gitignore        # Git ignore file
 ├── index.html        # Landing page, automatically redirects to welcome.html
 ├── 404.html          # 404, if page is not found
-├── script.txt        # The script from our presentation
+├── script.txt        # Script from our presentation
 └── README.md         # This file
 
 
 It has the following subfolders and files:
 ├── .git                            # Folder for git repo
 ├── img                             # Folder for images
-    /spotify.png                    # Pink spotify logo which takes you back to home page
-    /target.svg                     # Appears on the songs page when you play an embed
+    /spotify.png                    # Pink spotify logo which takes you back to the home page
+    /target.svg                     # Target which appears on the songs page, when you play an embed
 
 
 ├── pages                    # Folder for pages
-    /main.html               # Where user is redirected and provided the options to shuffle or choose a language
-    /shuffledplay.html       # Where user is randomly given a song and can choose to shuffle
-    /songs.html              # Where user can choose a language and how to sort the songs
-    /template.html           # Template we based the other pages on
+    /main.html               # Page where user can redirect to shuffledplay.html or songs.html
+    /shuffledplay.html       # Page that gives the user a random song and the option to shuffle to a new random song
+    /songs.html              # Page with filters to choose a language and order the songs
+    /template.html           # Page template for other pages
 
 
-├── scripts                  # folder for scripts
-    /main.js                 # script for the typing/scrolling feature on the main page
-    /scrolltopbutton.js      # script for button which returns you to the top of the page
-    /shuffledplay.js         # script that allows you to randomly select a new song
-    /songs.js                # script that filters and displays the embeds for the top 50 songs of each language
-    /writeToDB.js            # script that took the CSV and wrote the songs' data to firestore
+├── scripts                  # Folder for scripts
+    /main.js                 # Displays scrolling feature on the main page
+    /scrolltopbutton.js      # Adds button which returns you to the top of the page
+    /shuffledplay.js         # Displays embed for a random song and allows you to reshuffle for a new song
+    /songs.js                # Lists 50 songs and provides language/order filters
+    /writeToDB.js            # Reads from a CSV and writes the data to Firestore
 
 
 ├── styles                   # Folder for styles
-    /main.css                # styling for the main page
-    /shuffledplay.css        # styling for the shuffle play page
-    /songs.css               # styling for the songs page and for the embeds
+    /main.css                # Styling for the main page
+    /shuffledplay.css        # Styling for the shuffle play page
+    /songs.css               # Styling for the songs page and for the embeds
 
 
 Firebase hosting files: 
@@ -70,8 +70,8 @@ Firebase hosting files:
 ## Contact 
 * Kate Zraly - https://github.com/katelylynn
 * Ozan Yurtisigi - https://github.com/OzanYRT
-* Helen Liu - 
-* Mina Park - 
+* Helen Liu - https://github.com/schwi1996
+* Mina Park - https://github.com/sunminpark94
 
 ## Acknowledgements 
 * <a href="https://firebase.google.com/">Firebase</a>

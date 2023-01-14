@@ -4,6 +4,7 @@
 <head>
 
   <title>Versify by Artificial Unintelligents</title>
+  <link rel="icon" type="image/x-icon" href="../img/spotify.png">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -51,8 +52,10 @@
   </template>
 
   <nav class="navbar navbar-light bg-light">
+
     <a href="main.html"><img id="home" src="/img/spotify.png"></a>
-    <div class="m-4">
+
+    <div class="m-2">
       <div class="btn-group">
         <a class="navbar-brand">FILTERS</a>
         <select id="sort-by">
@@ -67,22 +70,22 @@
         </select>
       </div>
     </div>
+
     <button class="btn" id="applyfilter" onclick="displaySongs();">Apply Filter</button>
+    
   </nav>
 
   <div class="container">
 
     <div id="gallery" class="gallery"></div>
 
-    <button onclick="returnToCurrent()" id="scrollCurrentButton"><img id="target"
-        src="../img/target.svg"></img></button>
+    <button onclick="returnToCurrentPlaying()" id="scrollCurrentButton"><img id="target" src="../img/target.svg"></img></button>
     <button onclick="topFunction()" id="scrollTopButton" title="Scroll to top">&#11165;</button>
 
   </div>
 
   <!-- Our JavaScript files -->
   <script src="../scripts/firebaseAPI.js"></script>
-  <script src="../scripts/injectTemplates.js"></script>
   <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
   <script src="../scripts/songs.js"></script>
   <script src="../scripts/scrolltopbutton.js"></script>

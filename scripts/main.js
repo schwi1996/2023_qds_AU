@@ -1,3 +1,4 @@
+// Initializes the scrolling feature on the main page
 var typed = new Typed(".typing", {
     strings: ["Find the hottest songs of the year in J-pop, K-pop, and C-pop!",
       "Just login into Spotify and VERSIFY will bring you through the list!",

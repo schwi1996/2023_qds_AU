@@ -19,10 +19,10 @@ body {
 }
 
 #home {
-    max-width: 4.5em;
+    max-width: 4.0em;
     height: auto;
-    padding-left: 15%;
     margin-left: 25%;
+    padding: 8% 0 8% 15%;
 }
 
 .card {
@@ -63,14 +63,16 @@ body {
     background-color: rgba#67121da3;
     color: black;
     cursor: pointer;
-    padding: 1% 15px;
+    padding: 1%;
     border-radius: 10px;
     font-size: 21px;
+    aspect-ratio: 1 / 1;
 }
   
 #scrollTopButton:hover {
     background-color: rgba#67121dd1;
 }
+
 /* End of top button */
 
 /* Start of current button */
@@ -85,18 +87,14 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    width: 5%;
-    height: 6%;
+    width: 3.5%;
+    aspect-ratio: 1 / 1;
 
 }
 
 #target{
-    width: 75%;
-    aspect-ratio: 1 / 1;
-}
-
-#scrollCurrentButton:hover {
-    background-color: rgba#67121dd1;
+    width: 90%;
+    padding: 1%;
 }
 
 #applyfilter {

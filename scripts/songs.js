@@ -6,10 +6,14 @@ var gallery = document.getElementById('gallery');
 var cardTemplate = document.getElementById("cardTemplate");
 
 
+// The song the user is currently playing
+var currentPlaying;
+
+
 var iframe;
 
-var current;
 
+// Default filter values
 var sortBy = "topcharts";
 var language = document.getElementById("language");
 
@@ -17,11 +21,21 @@ var language = document.getElementById("language");
 // Get the URL String
 var parameters = new URL(window.location.href);
 
+// If the user selected a language from the main page, sets language variable to chosen language
 if (parameters.searchParams.get("language")) {
     language.value = parameters.searchParams.get("language");
 } else {
     language.value = "Korean";
 }
+
+
+// Displays the 50 songs only when the iframe is ready
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+
+    iframe = IFrameAPI;
+    displaySongs();
+
+};
 
 
 
@@ -35,29 +49,30 @@ function displayCard(index, nonTranslated, translated, embed) {
     else
         newCard.querySelector('.card-title').innerHTML = nonTranslated + " - " + translated;
 
-    // newCard.querySelector('.spotify-embed').src = embed;
-    
+
     gallery.appendChild(newCard);
 
-    manageEmbed(newCard, index, embed);
+    manageEmbed(index, embed);
 
 }
 
-function manageEmbed(element, index, embed) {
+// Sets up the embed
+function manageEmbed(index, embed) {
 
     let options = {
         uri: embed
     };
     let callback = (EmbedController) => {
         
+        // Checks if embed is playing
         EmbedController.addListener('playback_update', e => {
 
             var button = document.getElementById("scrollCurrentButton");
 
+            // If song is playing, set current to its index
             if (!e.data.isPaused) {
 
-                current = index;
-                console.log(current);
+                currentPlaying = index;
                 button.style.display = "block";
 
             } else {
@@ -66,9 +81,11 @@ function manageEmbed(element, index, embed) {
 
             }
 
+            // If it reaches the end of the song, remove it from currentPlaying
             if (e.data.position == e.data.duration) {
 
-                current = null;
+                currentPlaying = null;
+                button.style.display = "none";
 
             }
 
@@ -80,13 +97,18 @@ function manageEmbed(element, index, embed) {
     
 }
 
+// Displays the top 50 songs of a given language
 function displaySongs() {
 
     sortBy = document.getElementById("sort-by").value;
 
+    // Clears the gallery before generating 
     gallery.innerHTML = "";
 
+    // What we retrieve from Firestore
     var value;
+
+    // Ascending or descending
     var order;
 
     switch (sortBy) {
@@ -104,10 +126,6 @@ function displaySongs() {
         case "topcharts":
             value = "placement";
             order = "asc";
-            break;
-
-        default:
-            console.log("Try a for loop");
             break;
 
     }
@@ -133,16 +151,11 @@ function displaySongs() {
 
 }
 
-function returnToCurrent() {
+// Returns user to the currently playing song
+function returnToCurrentPlaying() {
 
-    gallery.children[current].scrollIntoView();
+    gallery.children[currentPlaying].scrollIntoView();
     
 }
 
-window.onSpotifyIframeApiReady = (IFrameAPI) => {
-
-    iframe = IFrameAPI;
-    displaySongs();
-
-};
 
